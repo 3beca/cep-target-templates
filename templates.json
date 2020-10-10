@@ -29,5 +29,84 @@
                 "supportTemplate": true
             }
         }
+    },
+    {
+        "name": "Sengrid",
+        "description": "Send an email via SendGrid",
+        "template": {
+            "url": "https://api.sendgrid.com/v3/mail/send",
+            "headers": {
+                "authorization": "Bearer [apiKey]"
+            },
+            "body": {
+                "personalizations": [
+                  {
+                    "to": [{
+                      "email": "[toEmail]"
+                    }]
+                  }
+                ],
+                "from": {
+                  "email": "[fromEmail]",
+                  "name": "[fromName]"
+                },
+                "reply_to": {
+                  "email": "[replyToEmail]",
+                  "name": "[replyToName]"
+                },
+                "subject": "[subject]",
+                "content": [{
+                  "type": "text/html",
+                  "value": "[htmlBody]"
+                }]
+              }
+        },
+        "fields": {
+            "apiKey": {
+                "type": "password",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "toEmail": {
+                "type": "email",
+                "required": true,
+                "supportTemplate": false
+            },
+            "fromEmail": {
+                "type": "email",
+                "required": true,
+                "supportTemplate": false
+            },
+            "fromName": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "replyToEmail": {
+                "type": "email",
+                "required": true,
+                "supportTemplate": false
+            },
+            "replyToName": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "subject": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": true
+            },
+            "htmlBody": {
+                "type": "multi-line-text",
+                "required": true,
+                "trim": false,
+                "supportTemplate": true
+            }
+        }
     }
 ]
