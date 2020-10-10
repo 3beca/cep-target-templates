@@ -14,6 +14,7 @@
             "token": {
                 "type": "text",
                 "required": true,
+                "trim": true,
                 "supportTemplate": false
             },
             "chatId": {
@@ -24,6 +25,7 @@
             "text": {
                 "type": "multi-line-text",
                 "required": true,
+                "trim": false,
                 "supportTemplate": true
             }
         }
