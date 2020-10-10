@@ -1,7 +1,7 @@
 [
     {
         "name": "Telegram",
-        "description": "Write to a Telegram Channel via Bot",
+        "description": "Send a message to a Telegram Channel via your favorite Bot",
         "template": {
             "url": "https://api.telegram.org/bot[token]/sendMessage",
             "headers": {},
