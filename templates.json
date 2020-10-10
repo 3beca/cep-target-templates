@@ -22,7 +22,7 @@
                 "supportTemplate": false
             },
             "text": {
-                "type": "multiline-text",
+                "type": "multi-line-text",
                 "required": true,
                 "supportTemplate": true
             }
