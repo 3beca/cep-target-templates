@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Telegram",
+        "description": "Write to a Telegram Channel via Bot",
+        "template": {
+            "url": "https://api.telegram.org/bot[token]/sendMessage",
+            "headers": {},
+            "body": {
+                "chat_id": "[chatId]",
+                "text": "[text]"
+            }
+        },
+        "fields": [
+            {
+                "fieldId": "token",
+                "type": "text",
+                "required": true,
+                "supportTemplate": false
+            },
+            {
+                "fieldId": "chatId",
+                "type": "integer",
+                "required": true,
+                "supportTemplate": false
+            },
+            {
+                "fieldId": "text",
+                "type": "multiline-text",
+                "required": true,
+                "supportTemplate": true
+            }
+        ]
+    }
+]
