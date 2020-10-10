@@ -10,25 +10,22 @@
                 "text": "[text]"
             }
         },
-        "fields": [
-            {
-                "fieldId": "token",
+        "fields": {
+            "token": {
                 "type": "text",
                 "required": true,
                 "supportTemplate": false
             },
-            {
-                "fieldId": "chatId",
+            "chatId": {
                 "type": "integer",
                 "required": true,
                 "supportTemplate": false
             },
-            {
-                "fieldId": "text",
+            "text": {
                 "type": "multiline-text",
                 "required": true,
                 "supportTemplate": true
             }
-        ]
+        }
     }
 ]
