@@ -3,11 +3,11 @@
         "name": "Telegram",
         "description": "Send a message to a Telegram Channel via your favorite Bot",
         "template": {
-            "url": "https://api.telegram.org/bot[token]/sendMessage",
+            "url": "https://api.telegram.org/bot{{token}}/sendMessage",
             "headers": {},
             "body": {
-                "chat_id": "[chatId]",
-                "text": "[text]"
+                "chat_id": "{{chatId}}",
+                "text": "{{text}}"
             }
         },
         "fields": {
@@ -36,28 +36,28 @@
         "template": {
             "url": "https://api.sendgrid.com/v3/mail/send",
             "headers": {
-                "authorization": "Bearer [apiKey]"
+                "authorization": "Bearer {{apiKey}}"
             },
             "body": {
                 "personalizations": [
                   {
                     "to": [{
-                      "email": "[toEmail]"
+                      "email": "{{toEmail}}"
                     }]
                   }
                 ],
                 "from": {
-                  "email": "[fromEmail]",
-                  "name": "[fromName]"
+                  "email": "{{fromEmail}}",
+                  "name": "{{fromName}}"
                 },
                 "reply_to": {
-                  "email": "[replyToEmail]",
-                  "name": "[replyToName]"
+                  "email": "{{replyToEmail}}",
+                  "name": "{{replyToName}}"
                 },
-                "subject": "[subject]",
+                "subject": "{{subject}}",
                 "content": [{
                   "type": "text/html",
-                  "value": "[htmlBody]"
+                  "value": "{{htmlBody}}"
                 }]
               }
         },
@@ -102,7 +102,7 @@
                 "supportTemplate": true
             },
             "htmlBody": {
-                "type": "multi-line-text",
+                "type": "html",
                 "required": true,
                 "trim": false,
                 "supportTemplate": true
