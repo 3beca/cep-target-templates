@@ -140,5 +140,59 @@
                 "supportTemplate": true
             }
         }
+    },
+    {
+        "name": "Trello",
+        "description": "Create a Trello Card via Rest API",
+        "template": {
+            "url": "https://api.trello.com/1/cards",
+            "headers": {},
+            "body": {
+                "key": "{{key}}",
+                "token": "{{token}}",
+                "idList": "{{idList}}",
+                "name":"{{name}}",
+                "desc": "{{desc}}",
+                "idMembers": ["{{idMember}}"]
+            }
+        },
+        "fields": {
+            "key": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "token": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "idList": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "name": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": true
+            },
+            "desc": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": true
+            },
+            "idMember": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            }
+        }
     }
 ]
