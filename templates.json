@@ -108,5 +108,37 @@
                 "supportTemplate": true
             }
         }
+    },
+    {
+        "name": "Slack",
+        "description": "Send a message to a Slack Channel via Incoming WebHooks",
+        "template": {
+            "url": "{{url}}",
+            "headers": {},
+            "body": {
+                "channel": "{{channel}}",
+                "text": "{{text}}"
+            }
+        },
+        "fields": {
+            "url": {
+                "type": "url",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "channel": {
+                "type": "text",
+                "required": true,
+                "trim": true,
+                "supportTemplate": false
+            },
+            "text": {
+                "type": "multi-line-text",
+                "required": true,
+                "trim": false,
+                "supportTemplate": true
+            }
+        }
     }
 ]
